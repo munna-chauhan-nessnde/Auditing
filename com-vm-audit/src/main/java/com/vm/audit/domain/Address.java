@@ -26,7 +26,8 @@ public @Data class Address {
 
 	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-	private Long resId;
+	@Column(name= "ADD_ID")
+	private Long addId;
 	@Column(name= "ADD_NAME")
 	private String addName;
 }

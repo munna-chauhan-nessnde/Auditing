@@ -4,14 +4,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import org.hibernate.envers.AuditTable;
 import org.hibernate.envers.Audited;
-import org.hibernate.envers.RevisionEntity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -34,9 +30,9 @@ public @Data class Reservation {
 	private Long addId;
 	private String resName;
 	private String resDiscription;
-	@ManyToOne
+	//@ManyToOne
 	//@JoinColumn(name= "ADD_NAME")
-	private Address address;
+	//private Address address;
 }
 /*The "revision type" field can currently have three values: 0, 1, 2, which means, respectively, ADD, MOD and DEL.
 A row with a revision of type DEL will only contain the id of the entity and no data (all fields NULL), 
